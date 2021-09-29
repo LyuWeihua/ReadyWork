@@ -1,0 +1,22 @@
+# configuration for dev environment
+
+---
+readyWork:
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+    # Http port if enableHttp is true.
+    httpPort: 8080
+
+  database:
+    sqlDebug: true
+    dataSource:
+      main:
+        type: mysql
+        #driverClass: com.mysql.cj.jdbc.Driver  #since mysql jdbc 8, The driver is automatically registered via the SPI
+        jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: 12345678
+        #table: demo
+        #sqlTemplatePath: /sql/ #give path to load sql template from outside class path, relative to the workspace path
+        sqlTemplate: sql/demo.sql #default load from class path

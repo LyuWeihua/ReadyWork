@@ -1,0 +1,123 @@
+---
+# 10000-19999 framework preserved
+# 20000-30000 for user business domain
+ERROR10000:
+  httpCode: 401
+  code: "ERROR10000"
+  message: "INVALID_AUTH_TOKEN"
+  description: "Incorrect signature or malformed token in authorization header"
+ERROR10002:
+  httpCode: 401
+  code: "ERROR10002"
+  message: "MISSING_AUTH_TOKEN"
+  description: "No Authorization header or the token is not bearer type"
+ERROR10007:
+  httpCode: 404
+  code: "ERROR10007"
+  message: "INVALID_REQUEST_PATH"
+  description: "Request path %s cannot be found."
+ERROR10009:
+  httpCode: 408
+  code: "ERROR10009"
+  message: "CLIENT_CREDENTIALS_TOKEN_NOT_AVAILABLE"
+  description: "Could not get client credentials token in client module"
+ERROR10010:
+  httpCode: 500
+  code: "ERROR10010"
+  message: "RUNTIME_EXCEPTION"
+  description: "Unexpected runtime exception"
+ERROR10013:
+  httpCode: 404
+  code: "ERROR10013"
+  message: "SERVER_INFO_DISABLED"
+  description: "Server info handler is disabled in info.json"
+ERROR10014:
+  httpCode: 400
+  code: "ERROR10014"
+  message: "GENERIC_EXCEPTION"
+  description: "Exception: %s"
+ERROR10020:
+  httpCode: 500
+  code: "ERROR10020"
+  message: "REGISTER_ERROR"
+  description: "Class %s fails to register %s to %s"
+ERROR10021:
+  httpCode: 500
+  code: "ERROR10021"
+  message: "UNREGISTER_ERROR"
+  description: "Class %s fails to unregister %s to %s"
+ERROR10022:
+  httpCode: 500
+  code: "ERROR10022"
+  message: "SUBSCRIBE_ERROR"
+  description: "Class %s fails to subscribe %s to %s"
+ERROR10023:
+  httpCode: 500
+  code: "ERROR10023"
+  message: "UNSUBSCRIBE_ERROR"
+  description: "Class %s fails to unsubscribe %s to %s"
+ERROR10024:
+  httpCode: 500
+  code: "ERROR10024"
+  message: "REGISTRY_IS_NULL"
+  description: "Registry must not be null"
+ERROR10042:
+  httpCode: 400
+  code: "ERROR10042"
+  message: "ERROR_NOT_DEFINED"
+  description: "Error code %s is not defined in status.yml file"
+ERROR10046:
+  httpCode: 401
+  code: "ERROR10046"
+  message: "INVALID_BASIC_HEADER"
+  description: "Invalid basic authentication header %s"
+ERROR10047:
+  httpCode: 400
+  code: "ERROR10047"
+  message: "INVALID_AUTH_USERNAME_OR_PASSWORD"
+  description: "Invalid username or password for basic authentication"
+ERROR10051:
+  httpCode: 503
+  code: "ERROR10051"
+  message: "FAIL_TO_SEND_REQUEST"
+  description: "Fail to send request to target server."
+ERROR10052:
+  httpCode: 401
+  code: "ERROR10052"
+  message: "GET_TOKEN_ERROR"
+  description: "Cannot get valid token: %s."
+ERROR10053:
+  httpCode: 503
+  code: "ERROR10053"
+  message: "ESTABLISH_CONNECTION_ERROR"
+  description: "Cannot establish connection for url %s."
+ERROR10054:
+  httpCode: 401
+  code: "ERROR10054"
+  message: "GET_TOKEN_TIMEOUT"
+  description: "Cannot get valid token, probably due to a timeout."
+ERROR10150:
+  httpCode: 400
+  code: "ERROR10150"
+  message: "PARAM_PARSE_EXCEPTION"
+  description: "Can not parse the parameter %s to %s type."
+ERROR10998:
+  httpCode: 403
+  code: "ERROR10998"
+  message: "ACCESS_DENIED"
+  description: "access denied."
+ERROR10999:
+  httpCode: 429
+  code: "ERROR10999"
+  message: "TOO_MANY_REQUESTS"
+  description: "Too many requests in a short time, have a rest and try again later."
+ERROR13002:
+  httpCode: 408
+  code: "ERROR13002"
+  message: "REQUEST_TIMEOUT"
+  description: "Cannot get service result, due to timeout."
+ERROR13003:
+  httpCode: 504
+  code: "ERROR13003"
+  message: "CIRCUIT_IS_OPENED"
+  description: "Cannot get service result, due to circuit is opened."

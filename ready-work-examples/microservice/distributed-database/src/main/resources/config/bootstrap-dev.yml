@@ -1,0 +1,34 @@
+# configuration for dev environment
+
+---
+readyWork:
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+
+    # dynamic port is used for containerization
+    dynamicPort: true
+
+    # Http port if enableHttp is true.
+    httpPort: 8080
+  database:
+    dataSource:
+      main:
+        type: mysql
+        #driverClass: com.mysql.cj.jdbc.Driver  #since mysql jdbc 8, The driver is automatically registered via the SPI
+        jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: 12345678
+#      txlog:
+#        type: mysql
+#        enabledTransaction: false
+#        #driverClass: com.mysql.cj.jdbc.Driver  #since mysql jdbc 8, The driver is automatically registered via the SPI
+#        jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+#        username: root
+#        password: 12345678
+readyCloud:
+  jdbcIpFinder: true
+#  transaction:
+#    txLogger:
+#      dataSource: txlog
+

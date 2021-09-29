@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>examples</artifactId>
+        <groupId>work.ready.examples</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>microservice</artifactId>
+    <name>Ready.Work microservice examples</name>
+    <packaging>pom</packaging>
+    <url>http://ready.work</url>
+    <description>Ready.Work framework microservice examples</description>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compile.source>11</maven.compile.source>
+        <maven.compile.target>11</maven.compile.target>
+        <maven.source.plugin>3.0.1</maven.source.plugin>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>work.ready</groupId>
+            <artifactId>ready-work-core</artifactId>
+            <version>0.6.6.rc6</version>
+        </dependency>
+        <dependency>
+            <groupId>work.ready</groupId>
+            <artifactId>ready-work-cloud</artifactId>
+            <version>0.6.6.rc6</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>get-started</module>
+        <module>distributed-database</module>
+        <module>distributed-transaction</module>
+        <module>distributed-computing</module>
+        <module>cloud-config</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Lyu WeiHua</name>
+            <email>cleverbug@163.com</email>
+            <organization>ready.work</organization>
+            <roles>
+                <role>founder</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compile.source}</source>
+                    <target>${maven.compile.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <compilerArgs>
+                        <compilerArg>-parameters</compilerArg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
+

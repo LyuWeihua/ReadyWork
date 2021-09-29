@@ -1,0 +1,6 @@
+# configuration
+
+---
+readyWork:
+  profiles:
+    active: dev

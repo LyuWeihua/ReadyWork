@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>chat example</title>
+</head>
+<body>
+<div class="page">
+    <div class="center">
+        <h1>WebSocket Chat</h1>
+        <div id="chat">
+        </div>
+
+        <form id="form" class="chatform" action="">
+            <label for="message">Message</label>
+            To Server: <input type="text" name="message" id="message">
+            To Group: <input type="text" name="group_message" id="group_message">
+        </form>
+    </div>
+</div>
+<script language="JavaScript">
+    if (!window.WebSocket) {
+        alert("the browser does not support WebSocket");
+    }
+    const socket = new WebSocket("ws://localhost:8080/web/chat");
+    socket.onmessage = function (event) {
+        const chat = document.getElementById("chat");
+        chat.innerHTML = chat.innerHTML + event.data + "<br />";
+    };
+
+    function send(message) {
+        if (socket.readyState === WebSocket.OPEN) {
+            const bean = {text: message};
+            socket.send(JSON.stringify(bean));
+        } else {
+            alert("socket is not open.");
+        }
+        return false;
+    }
+
+    document.getElementById("message").onkeypress = function () {
+        if (event.keyCode === 13) {
+            const input = document.getElementById("message");
+            send(input.value);
+            input.value = ''
+        }
+    };
+
+    document.getElementById("group_message").onkeypress = function () {
+        if (event.keyCode === 13) {
+            const input = document.getElementById("group_message");
+            send("group::" + input.value);
+            input.value = ''
+        }
+    };
+
+    document.getElementById("form").onsubmit = function () {
+        return false;
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# configuration for dev environment
+
+---
+readyWork:
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+    # Http port if enableHttp is true.
+    httpPort: 8080
+
+  interceptor:
+    easyDemo:
+      enabled: true
+      interceptor: work.ready.examples.ioc_aop.interceptor.ThirdInterceptor
+      typeInclude:
+        named: work.ready.examples.ioc_aop.service.Pig
+      methodInclude:
+        named: sleep

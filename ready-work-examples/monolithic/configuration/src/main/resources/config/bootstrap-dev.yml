@@ -1,0 +1,19 @@
+# configuration for dev environment
+
+---
+readyWork:
+  server:
+    # This is the default binding address.
+    ip: ${httpIp}
+
+    # dynamic port is used for containerization
+    dynamicPort: false
+
+    # Http port if enableHttp is true.
+    httpPort: ${httpPort}
+
+
+otherConfig:
+  key1: value1
+  key2: value2
+  password: CRYPT:f9ov9JMjrb5aZjG/gUu4BorV+EV7/Na8ti2Jd5CTcYo=

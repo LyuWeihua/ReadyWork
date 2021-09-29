@@ -1,0 +1,16 @@
+# configuration for dev environment
+
+---
+readyWork:
+  mainNtpHost: ntp2.aliyun.com
+  fallbackNtpHost:
+    - time2.cloud.tencent.com
+    - cn.ntp.org.cn
+  uuidWorkerId: MAC # MAC/IP/0-262143, MAC by default
+
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+    # Http port if enableHttp is true.
+    httpPort: 8080
+

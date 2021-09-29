@@ -1,0 +1,14 @@
+---
+SUCCESS20200:
+  httpCode: 200
+  code: SUCCESS20200
+  message: SUCCESS
+  severity: NA
+  description: "The request is handled successfully! Time: %s"
+
+
+ERROR20750:
+  httpCode: 400
+  code: ERROR20750
+  message: "PARAM_PARSE_EXCEPTION"
+  description: "Can not parse the parameter %s to %s type."

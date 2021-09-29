@@ -1,0 +1,21 @@
+# configuration for dev environment
+
+---
+readyWork:
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+    # Http port if enableHttp is true.
+    httpPort: 8080
+
+  log:
+    consoleLogLevel: ALL
+
+    fileLogPath: logs/
+    separatedFileLog: false
+    fileLogLevel: ALL
+    fileLogCount: 10 #the number of files to use
+    fileLogLimit: 10000000 # the maximum number of bytes to write to each log file
+
+    filter:
+      #work.ready.core.handler.request: INFO

@@ -1,0 +1,21 @@
+# Application configuration
+---
+
+readyWork:
+  profiles:
+    active: dev
+
+  server:
+    # This is the default binding address.
+    ip: 0.0.0.0
+    # Http port if enableHttp is true.
+    httpPort: 8080
+
+  appModule:
+    moduleConfig:
+      firstModule:
+        config-item1: 1111111
+        config-item2: 2222222
+      secondModule:
+        config-item1: 3333333
+        config-item2: 4444444

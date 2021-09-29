@@ -1,0 +1,13 @@
+# configuration for dev environment
+
+---
+readyCloud:
+  configServer:
+    clientId: configClient
+    clientSecret: 123456
+    #configRepository: /config-repository/
+  configClient:
+    enabled: true
+    configServerUri: http://localhost:8080/
+    clientId: configClient
+    clientSecret: 123456

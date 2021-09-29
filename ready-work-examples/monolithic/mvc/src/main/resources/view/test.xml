@@ -1,0 +1,1 @@
+<xml><name>#now() #("ABCDE".substring(0, 3))</name></xml>
