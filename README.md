@@ -1,4 +1,4 @@
-# ReadyWork
+# Ready.Work 
 AN ULTRA-EASY, MODULAR MICROSERVICE, DISTRIBUTED TRANSACTION, PARALLEL COMPUTING, ALL-IN-ONE WEB FRAMEWORK
 
-please visit https://ready.work/ for more information
+Please visit https://ready.work/ for more information
